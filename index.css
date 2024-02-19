@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fillBorder {
+  0% {
+    clip-path: polygon(0% 0%, 50% 50%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+  }
+
+  12.5% {
+    clip-path: polygon(
+      0% 0%,
+      50% 50%,
+      100% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%
+    );
+  }
+
+  37.5% {
+    clip-path: polygon(
+      0% 0%,
+      50% 50%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      100% 0%
+    );
+  }
+
+  62.5% {
+    clip-path: polygon(
+      0% 0%,
+      50% 50%,
+      0% 100%,
+      0% 100%,
+      0% 100%,
+      100% 100%,
+      100% 0%
+    );
+  }
+
+  87.5% {
+    clip-path: polygon(
+      0% 0%,
+      50% 50%,
+      0% 0%,
+      0% 0%,
+      0% 100%,
+      100% 100%,
+      100% 0%
+    );
+  }
+
+  100% {
+    clip-path: polygon(
+      0% 0%,
+      50% 50%,
+      50% 0%,
+      0% 0%,
+      0% 100%,
+      100% 100%,
+      100% 0%
+    );
+  }
+}
+
+/* Apply the animation to the element */
+.fillBorder {
+  animation: fillBorder 8s ease-in-out forwards;
+}
+
+.fade-out {
+  animation-name: fadeOut;
+  animation-duration: 1s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes floatInFromDown {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.float-in-from-down {
+  animation: floatInFromDown 1s ease forwards;
+}
+
+/* squre animation */
+/* Hero7.css */
+@keyframes squareEntrance {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.square-animation {
+  width: 100px;
+  height: 100px;
+  background-color: #fff; /* Change the background color as needed */
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: squareEntrance 0.5s ease forwards;
+}
+
+.main {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 800px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  /* margin: 0 auto; */
+  width: 100%;
+}
+
+.cell {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  /* width: 200px; */
+  width: 434.9px;
+  font-size: 26px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.92);
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  /* height: 372px; */
+  height: 619.21px;
+  transform-origin: center bottom;
+  /* background: red; */
+}
+
+.picker {
+  position: relative;
+  overflow: hidden;
+  width: 80vw;
+  height: 90vh;
+  border-radius: 2px;
+  background-color: transparent;
+}
